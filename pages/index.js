@@ -28,8 +28,6 @@ function Home() {
                 margin: 0;
                 
             }
-
-
             `}</style>
         
         </div>
@@ -38,5 +36,5 @@ function Home() {
 
 }
 
-export default Home;
+export default Home;  
 

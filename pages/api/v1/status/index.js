@@ -1,4 +1,4 @@
-import database from "../../../../infra/database";
+import database from "/infra/database";
 
 // GET: /api/v1/status
 async function status(request, response) {

@@ -34,10 +34,15 @@ function getSSLSection() {
     };
   }
 
-  return process.env.NODE_ENV === "production" ? true : true;
+  return process.env.NODE_ENV === "production" ? true : false;
+}
+
+async function clean() {
+  await query("DROP schema public cascade; CREATE schema public;");
 }
 
 export default {
   query,
   getConnection,
+  clean,
 };

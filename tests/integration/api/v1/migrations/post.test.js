@@ -1,10 +1,8 @@
 import database from "infra/database";
 
-async function cleanDatabase() {
-  await database.query("DROP schema public cascade; CREATE schema public;");
-}
-
-beforeAll(cleanDatabase);
+beforeAll(async () => {
+  await database.clean();
+});
 
 test("POST to /api/v1/migrations should return 200", async () => {
   const response1 = await fetch("http://localhost:3000/api/v1/migrations", {

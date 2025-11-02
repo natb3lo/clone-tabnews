@@ -1,6 +1,4 @@
 const { exec } = require("node:child_process");
-const { error } = require("node:console");
-const { stdout, stderr } = require("node:process");
 
 function checkPostgres() {
   exec(

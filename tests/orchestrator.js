@@ -15,6 +15,8 @@ async function waitWebServer() {
   );
 }
 
-export default {
+const orchestrator = {
   waitWebServer,
 };
+
+export default orchestrator;

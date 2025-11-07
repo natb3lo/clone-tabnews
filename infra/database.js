@@ -41,8 +41,10 @@ async function clean() {
   await query("DROP schema public cascade; CREATE schema public;");
 }
 
-export default {
+const database = {
   query,
   getConnection,
   clean,
 };
+
+export default database;
